@@ -28,33 +28,14 @@ Implemented operations:
  
  
 ## Installation
-Currently only Linux is supported, if you are running a different OS please use Google Colab or the Docker image.
-### Precompiled packages
-If you are running Linux you can install Torch Radon by running:
-```shell script
-wget -qO- https://raw.githubusercontent.com/matteo-ronchetti/torch-radon/master/auto_install.py  | python -
-```
-
-### Google Colab
-You can try the library from your browser using Google Colab, you can find an example
-notebook [here](https://colab.research.google.com/drive/10GdKHk_6346aR4jl5VjPPAod1gTEsza9?usp=sharing).
-
-### Docker Image
-Docker images with PyTorch CUDA and Torch Radon are available [here](https://hub.docker.com/repository/docker/matteoronchetti/torch-radon).
-```shell script
-docker pull matteoronchetti/torch-radon
-```
-To use the GPU in docker you need to use [nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
 
 ### Build from source
 You need to have [CUDA](https://developer.nvidia.com/cuda-toolkit) and [PyTorch](https://pytorch.org/get-started/locally/) installed, then run:
 ```shell script
-git clone https://github.com/matteo-ronchetti/torch-radon.git
+git clone https://github.com/J-3TO/torch-radon.git
 cd torch-radon
 python setup.py install
 ```
-If you encounter any problem please contact the author or open an issue.
-
 ## Benchmarks
 The library is noticeably faster than the Astra Toolbox, especially when data is already on the GPU. Main disadvantage of Astra is that it only takes inputs which are on the CPU, this makes training end-to-end neural networks very inefficient.
 The following benchmark compares the speed of Astra Toolbox and Torch Radon:
